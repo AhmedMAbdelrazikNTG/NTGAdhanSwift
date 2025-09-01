@@ -147,6 +147,8 @@ The Adhan library can also calulate Sunnah times. Given an instance of `PrayerTi
 if let sunnahTimes = SunnahTimes(from: todayPrayers) {
 	print(dateFormatter.string(from: sunnahTimes.lastThirdOfTheNight)
 	print(dateFormatter.string(from: sunnahTimes.middleOfTheNight)
+    print(dateFormatter.string(from: sunnahTimes.duha)
+
 }
 ```
 

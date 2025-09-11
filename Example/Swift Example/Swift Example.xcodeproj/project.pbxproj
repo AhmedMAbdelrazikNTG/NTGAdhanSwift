@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		279182122E72238900DF9697 /* Adhan in Frameworks */ = {isa = PBXBuildFile; productRef = 279182112E72238900DF9697 /* Adhan */; };
+		84369E9E1CD03D2500C34812 /* Adhan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84369E9D1CD03D2500C34812 /* Adhan.framework */; };
 		84AB2EB71CD03C6A00BF9663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB2EB61CD03C6A00BF9663 /* AppDelegate.swift */; };
 		84AB2EB91CD03C6A00BF9663 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB2EB81CD03C6A00BF9663 /* ViewController.swift */; };
 		84AB2EBC1CD03C6A00BF9663 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AB2EBA1CD03C6A00BF9663 /* Main.storyboard */; };
@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84369E9D1CD03D2500C34812 /* Adhan.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adhan.framework; path = "../../build/Debug-iphoneos/Adhan.framework"; sourceTree = "<group>"; };
 		84AB2EB31CD03C6A00BF9663 /* Swift Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AB2EB61CD03C6A00BF9663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84AB2EB81CD03C6A00BF9663 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				279182122E72238900DF9697 /* Adhan in Frameworks */,
+				84369E9E1CD03D2500C34812 /* Adhan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +41,7 @@
 		84AB2EAA1CD03C6A00BF9663 = {
 			isa = PBXGroup;
 			children = (
+				84369E9D1CD03D2500C34812 /* Adhan.framework */,
 				84AB2EB51CD03C6A00BF9663 /* Swift Example */,
 				84AB2EB41CD03C6A00BF9663 /* Products */,
 			);
@@ -111,9 +113,6 @@
 				Base,
 			);
 			mainGroup = 84AB2EAA1CD03C6A00BF9663;
-			packageReferences = (
-				279182102E72238900DF9697 /* XCLocalSwiftPackageReference "../../../NTGAdhanSwift" */,
-			);
 			productRefGroup = 84AB2EB41CD03C6A00BF9663 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -278,14 +277,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9ZMAYFLV5H;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Swift Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amin.adhan;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.batoulapps.Swift-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -294,13 +290,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9ZMAYFLV5H;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Swift Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.batoulapps.Swift-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -328,20 +321,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCLocalSwiftPackageReference section */
-		279182102E72238900DF9697 /* XCLocalSwiftPackageReference "../../../NTGAdhanSwift" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../../NTGAdhanSwift;
-		};
-/* End XCLocalSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		279182112E72238900DF9697 /* Adhan */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Adhan;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84AB2EAB1CD03C6A00BF9663 /* Project object */;
 }

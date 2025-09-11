@@ -16,13 +16,13 @@ class ViewController: UIViewController {
         
         let cal = Calendar(identifier: Calendar.Identifier.gregorian)
         let date = cal.dateComponents([.year, .month, .day], from: Date())
-        let coordinates = Coordinates(latitude: 29.986263, longitude: 31.26357)
-        var params = CalculationMethod.egyptian.params
-        params.madhab = .shafi
+        let coordinates = Coordinates(latitude: 35.78056, longitude: -78.6389)
+        var params = CalculationMethod.muslimWorldLeague.params
+        params.madhab = .hanafi
         if let prayers = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params) {
             let formatter = DateFormatter()
             formatter.timeStyle = .medium
-            formatter.timeZone = TimeZone.current
+            formatter.timeZone = TimeZone(identifier: "America/New_York")!
             
             NSLog("fajr %@", formatter.string(from: prayers.fajr))
             NSLog("sunrise %@", formatter.string(from: prayers.sunrise))

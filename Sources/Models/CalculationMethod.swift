@@ -89,92 +89,225 @@ import Foundation
   Defaults to angles of 0°, should generally be used for making a custom method and setting your own values.
 
 */
-public enum CalculationMethod: String, Codable, CaseIterable {
 
-    // Muslim World League
-    case muslimWorldLeague
-
-    // Egyptian General Authority of Survey
-    case egyptian
-
-    // University of Islamic Sciences, Karachi
-    case karachi
-
-    // Umm al-Qura University, Makkah
-    case ummAlQura
-
-    // UAE
-    case dubai
-
-    // Moonsighting Committee
-    case moonsightingCommittee
-
-    // ISNA
-    case northAmerica
-
-    // Kuwait
-    case kuwait
-
-    // Qatar
-    case qatar
-
-    // Singapore
-    case singapore
-
-    // Institute of Geophysics, University of Tehran
-    case tehran
-
-    // Dianet
-    case turkey
-
-    // Other
-    case other
-
+public enum CalculationMethod: Int, Codable, CaseIterable {
+    case karachi              = 1
+    case northAmericaUSA      = 2
+    case muslimWorldLeague    = 3
+    case ummAlQura            = 4
+    case egyptian             = 5
+    case dubai                = 6
+    case kuwait               = 7
+    case qatar                = 8
+    case singapore            = 9
+    case algerian             = 10
+    case france               = 11
+    case russia               = 12
+    case tunisia              = 13
+    case turkey               = 14
+    case morocco              = 15
+    case jordan               = 16
+    case oman                 = 17
+    case munich               = 18
+    case maldives             = 19
+    case northAmericaCanada   = 20
+    case tajikistan           = 21
+    case vienna               = 22
+    case belgium              = 23
+    case sudan                = 24
+    case libya                = 25
+    case iraq                 = 26
+    case luxembourg           = 27
+    case tehran               = 28
+    case moonsightingCommittee = 29
+    case other                = 30
+    
+    
+    // MARK: - Human-readable name
+    public var name: String {
+        switch self {
+            case .muslimWorldLeague: return "Muslim World League (MWL)"
+            case .egyptian: return "Egyptian General Authority of Survey"
+            case .karachi: return "University of Islamic Sciences, Karachi"
+            case .ummAlQura: return "Umm al-Qura University, Makkah"
+            case .dubai: return "UAE – General Authority of Islamic Affairs & Endowments (Dubai)"
+            case .moonsightingCommittee: return "Moonsighting Committee Worldwide"
+            case .northAmericaUSA: return "Islamic Society of North America (ISNA) - USA"
+            case .northAmericaCanada: return "Fiqh Council of North America - Canada"
+            case .kuwait: return "Ministry of Awqaf and Islamic Affairs, Kuwait"
+            case .qatar: return "Qatar Calendar House"
+            case .singapore: return "Majlis Ugama Islam Singapura (MUIS)"
+            case .tehran: return "Institute of Geophysics, University of Tehran"
+            case .turkey: return "Türkiye Diyanet İşleri Başkanlığı (Diyanet)"
+            case .algerian: return "Ministry of Religious Affairs and Endowments, Algeria"
+            case .france: return "Union des Organisations Islamiques de France (UOIF)"
+            case .russia: return "Spiritual Administration of Muslims of Russia"
+            case .tunisia: return "Ministry of Religious Affairs, Tunisia"
+            case .morocco: return "Ministry of Habous and Islamic Affairs, Morocco"
+            case .jordan: return "Jordanian Ministry of Awqaf Islamic Affairs and Holy Places"
+            case .oman: return "Ministry of Awqaf and Religious Affairs, Oman"
+            case .munich: return "Islamic Centre of Munich"
+            case .maldives: return "Ministry of Islamic Affairs, Maldives"
+            case .tajikistan: return "Islamic Centre of Tajikistan"
+            case .vienna: return "Islamic Centre of Vienna"
+            case .belgium: return "Islamic and Cultural Centre of Belgium"
+            case .sudan: return "Sudan University of Science and Technology (Astronomy Dept.)"
+            case .libya: return "General Authority of Islamic Affairs, Libya"
+            case .iraq: return "Sunni Endowment Office, Iraq"
+            case .luxembourg: return "Islamic Centre of Luxembourg"
+            case .other: return "Custom / Manual Method"
+        }
+    }
+    
+    // MARK: - Description with calculation details
+    public var detailedDescription: String {
+        switch self {
+            case .muslimWorldLeague:
+                return "Muslim World League (MWL) - Fajr: 18°, Isha: 17°"
+            case .egyptian:
+                return "Egyptian General Authority of Survey - Fajr: 19.5°, Isha: 17.5°"
+            case .karachi:
+                return "University of Islamic Sciences, Karachi - Fajr: 18°, Isha: 18°"
+            case .ummAlQura:
+                return "Umm al-Qura University, Makkah - Fajr: 18.5°, Isha: 90 min after Maghrib"
+            case .dubai:
+                return "UAE Dubai - Fajr: 18.2°, Isha: 18.2°"
+            case .northAmericaUSA:
+                return "ISNA USA - Fajr: 15°, Isha: 15°"
+            case .northAmericaCanada:
+                return "Fiqh Council Canada - Fajr: 13°, Isha: 13°"
+            case .qatar:
+                return "Qatar Calendar House - Fajr: 18°, Isha: 90 min after Maghrib"
+            case .jordan:
+                return "Jordan Ministry of Awqaf - Fajr: 18.5°, Isha: 90 min after Maghrib"
+            case .oman:
+                return "Oman Ministry of Awqaf - Fajr: 18.5°, Isha: 90 min after Maghrib"
+            case .tehran:
+                return "University of Tehran - Fajr: 17.7°, Maghrib: 4.5°, Isha: 14°"
+            case .singapore:
+                return "MUIS Singapore - Fajr: 20°, Isha: 18°"
+            case .france:
+                return "UOIF France - Fajr: 12°, Isha: 12°"
+            case .russia:
+                return "Russia Muslims Administration - Fajr: 16°, Isha: 15°"
+            default:
+                return name
+        }
+    }
+    
+    // MARK: - Reverse Lookup
+    public static func from(code: Int) -> CalculationMethod {
+        return CalculationMethod(rawValue: code) ?? .muslimWorldLeague
+    }
+    
+    // MARK: - Parameters
     public var params: CalculationParameters {
-        switch(self) {
-        case .muslimWorldLeague:
-            var params = CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
-            params.methodAdjustments = PrayerAdjustments(dhuhr: 1)
-            return params
-        case .egyptian:
-            var params = CalculationParameters(fajrAngle: 19.5, ishaAngle: 17.5, method: self)
-            params.methodAdjustments = PrayerAdjustments(dhuhr: 1)
-            return params
-        case .karachi:
-            var params = CalculationParameters(fajrAngle: 18, ishaAngle: 18, method: self)
-            params.methodAdjustments = PrayerAdjustments(dhuhr: 1)
-            return params
-        case .ummAlQura:
-            return CalculationParameters(fajrAngle: 18.5, ishaInterval: 90, method: self)
-        case .dubai:
-            var params = CalculationParameters(fajrAngle: 18.2, ishaAngle: 18.2, method: self)
-            params.methodAdjustments = PrayerAdjustments(sunrise: -3, dhuhr: 3, asr: 3, maghrib: 3)
-            return params
-        case .moonsightingCommittee:
-            var params = CalculationParameters(fajrAngle: 18, ishaAngle: 18, method: self)
-            params.methodAdjustments = PrayerAdjustments(dhuhr: 5, maghrib: 3)
-            return params
-        case .northAmerica:
-            var params = CalculationParameters(fajrAngle: 15, ishaAngle: 15, method: self)
-            params.methodAdjustments = PrayerAdjustments(dhuhr: 1)
-            return params
-        case .kuwait:
-            return CalculationParameters(fajrAngle: 18, ishaAngle: 17.5, method: self)
-        case .qatar:
-            return CalculationParameters(fajrAngle: 18, ishaInterval: 90, method: self)
-        case .singapore:
-            var params = CalculationParameters(fajrAngle: 20, ishaAngle: 18, method: self)
-            params.methodAdjustments = PrayerAdjustments(dhuhr: 1)
-            params.rounding = .up
-            return params
-        case .tehran:
-            return CalculationParameters(fajrAngle: 17.7, maghribAngle: 4.5, ishaAngle: 14, method: self)
-        case .turkey:
-            var params = CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
-            params.methodAdjustments = PrayerAdjustments(fajr: 0, sunrise: -7, dhuhr: 5, asr: 4, maghrib: 7, isha: 0)
-            return params
-        case .other:
-            return CalculationParameters(fajrAngle: 0, ishaAngle: 0, method: self)
+        switch self {
+            case .muslimWorldLeague, .other:
+                var params = CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
+                params.methodAdjustments = PrayerAdjustments(dhuhr: 1)
+                return params
+                
+            case .egyptian:
+                var params = CalculationParameters(fajrAngle: 19.5, ishaAngle: 17.5, method: self)
+                params.methodAdjustments = PrayerAdjustments(dhuhr: 1)
+                return params
+                
+            case .karachi:
+                var params = CalculationParameters(fajrAngle: 18, ishaAngle: 18, method: self)
+                params.methodAdjustments = PrayerAdjustments(dhuhr: 1)
+                return params
+                
+            case .ummAlQura:
+                return CalculationParameters(fajrAngle: 18.5, ishaInterval: 90, method: self)
+                
+            case .dubai:
+                var params = CalculationParameters(fajrAngle: 18.2, ishaAngle: 18.2, method: self)
+                params.methodAdjustments = PrayerAdjustments(sunrise: -3, dhuhr: 3, asr: 3, maghrib: 3)
+                return params
+                
+            case .moonsightingCommittee:
+                var params = CalculationParameters(fajrAngle: 18, ishaAngle: 18, method: self)
+                params.methodAdjustments = PrayerAdjustments(dhuhr: 5, maghrib: 3)
+                return params
+                
+            case .northAmericaUSA:
+                var params = CalculationParameters(fajrAngle: 15, ishaAngle: 15, method: self)
+                params.methodAdjustments = PrayerAdjustments(dhuhr: 1)
+                return params
+                
+            case .northAmericaCanada:
+                var params = CalculationParameters(fajrAngle: 13, ishaAngle: 13, method: self)
+                params.methodAdjustments = PrayerAdjustments(dhuhr: 1)
+                return params
+                
+            case .kuwait:
+                return CalculationParameters(fajrAngle: 18, ishaAngle: 17.5, method: self)
+                
+            case .qatar:
+                return CalculationParameters(fajrAngle: 18, ishaInterval: 90, method: self)
+                
+            case .singapore:
+                var params = CalculationParameters(fajrAngle: 20, ishaAngle: 18, method: self)
+                params.methodAdjustments = PrayerAdjustments(dhuhr: 1)
+                params.rounding = .up
+                return params
+                
+            case .tehran:
+                return CalculationParameters(fajrAngle: 17.7, maghribAngle: 4.5, ishaAngle: 14, method: self)
+                
+            case .turkey:
+                var params = CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
+                params.methodAdjustments = PrayerAdjustments(fajr: 0, sunrise: -7, dhuhr: 5, asr: 4, maghrib: 7, isha: 0)
+                return params
+                
+            case .algerian:
+                return CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
+                
+            case .france:
+                return CalculationParameters(fajrAngle: 12, ishaAngle: 12, method: self)
+                
+            case .russia:
+                return CalculationParameters(fajrAngle: 16, ishaAngle: 15, method: self)
+                
+            case .tunisia:
+                return CalculationParameters(fajrAngle: 18, ishaAngle: 18, method: self)
+                
+            case .morocco:
+                return CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
+                
+            case .jordan:
+                return CalculationParameters(fajrAngle: 18.5, ishaInterval: 90, method: self)
+                
+            case .oman:
+                return CalculationParameters(fajrAngle: 18.5, ishaInterval: 90, method: self)
+                
+            case .munich:
+                return CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
+                
+            case .maldives:
+                return CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
+                
+            case .tajikistan:
+                return CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
+                
+            case .vienna:
+                return CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
+                
+            case .belgium:
+                return CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
+                
+            case .sudan:
+                return CalculationParameters(fajrAngle: 19.5, ishaAngle: 17.5, method: self)
+                
+            case .libya:
+                return CalculationParameters(fajrAngle: 19.5, ishaAngle: 17.5, method: self)
+                
+            case .iraq:
+                return CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
+                
+            case .luxembourg:
+                return CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
         }
     }
 }

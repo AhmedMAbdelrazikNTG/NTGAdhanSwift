@@ -120,78 +120,40 @@ public enum CalculationMethod: Int, Codable, CaseIterable {
     case luxembourg           = 27
     case tehran               = 28
     case moonsightingCommittee = 29
-    case other                = 30
     
     
     // MARK: - Human-readable name
     public var name: String {
         switch self {
-            case .muslimWorldLeague: return "Muslim World League (MWL)"
-            case .egyptian: return "Egyptian General Authority of Survey"
-            case .karachi: return "University of Islamic Sciences, Karachi"
-            case .ummAlQura: return "Umm al-Qura University, Makkah"
-            case .dubai: return "UAE – General Authority of Islamic Affairs & Endowments (Dubai)"
-            case .moonsightingCommittee: return "Moonsighting Committee Worldwide"
-            case .northAmericaUSA: return "Islamic Society of North America (ISNA) - USA"
-            case .northAmericaCanada: return "Fiqh Council of North America - Canada"
-            case .kuwait: return "Ministry of Awqaf and Islamic Affairs, Kuwait"
-            case .qatar: return "Qatar Calendar House"
-            case .singapore: return "Majlis Ugama Islam Singapura (MUIS)"
-            case .tehran: return "Institute of Geophysics, University of Tehran"
-            case .turkey: return "Türkiye Diyanet İşleri Başkanlığı (Diyanet)"
-            case .algerian: return "Ministry of Religious Affairs and Endowments, Algeria"
-            case .france: return "Union des Organisations Islamiques de France (UOIF)"
-            case .russia: return "Spiritual Administration of Muslims of Russia"
-            case .tunisia: return "Ministry of Religious Affairs, Tunisia"
-            case .morocco: return "Ministry of Habous and Islamic Affairs, Morocco"
-            case .jordan: return "Jordanian Ministry of Awqaf Islamic Affairs and Holy Places"
-            case .oman: return "Ministry of Awqaf and Religious Affairs, Oman"
-            case .munich: return "Islamic Centre of Munich"
-            case .maldives: return "Ministry of Islamic Affairs, Maldives"
-            case .tajikistan: return "Islamic Centre of Tajikistan"
-            case .vienna: return "Islamic Centre of Vienna"
-            case .belgium: return "Islamic and Cultural Centre of Belgium"
-            case .sudan: return "Sudan University of Science and Technology (Astronomy Dept.)"
-            case .libya: return "General Authority of Islamic Affairs, Libya"
-            case .iraq: return "Sunni Endowment Office, Iraq"
-            case .luxembourg: return "Islamic Centre of Luxembourg"
-            case .other: return "Custom / Manual Method"
-        }
-    }
-    
-    // MARK: - Description with calculation details
-    public var detailedDescription: String {
-        switch self {
-            case .muslimWorldLeague:
-                return "Muslim World League (MWL) - Fajr: 18°, Isha: 17°"
-            case .egyptian:
-                return "Egyptian General Authority of Survey - Fajr: 19.5°, Isha: 17.5°"
-            case .karachi:
-                return "University of Islamic Sciences, Karachi - Fajr: 18°, Isha: 18°"
-            case .ummAlQura:
-                return "Umm al-Qura University, Makkah - Fajr: 18.5°, Isha: 90 min after Maghrib"
-            case .dubai:
-                return "UAE Dubai - Fajr: 18.2°, Isha: 18.2°"
-            case .northAmericaUSA:
-                return "ISNA USA - Fajr: 15°, Isha: 15°"
-            case .northAmericaCanada:
-                return "Fiqh Council Canada - Fajr: 13°, Isha: 13°"
-            case .qatar:
-                return "Qatar Calendar House - Fajr: 18°, Isha: 90 min after Maghrib"
-            case .jordan:
-                return "Jordan Ministry of Awqaf - Fajr: 18.5°, Isha: 90 min after Maghrib"
-            case .oman:
-                return "Oman Ministry of Awqaf - Fajr: 18.5°, Isha: 90 min after Maghrib"
-            case .tehran:
-                return "University of Tehran - Fajr: 17.7°, Maghrib: 4.5°, Isha: 14°"
-            case .singapore:
-                return "MUIS Singapore - Fajr: 20°, Isha: 18°"
-            case .france:
-                return "UOIF France - Fajr: 12°, Isha: 12°"
-            case .russia:
-                return "Russia Muslims Administration - Fajr: 16°, Isha: 15°"
-            default:
-                return name
+            case .muslimWorldLeague: return "muslim_world_league".localized
+            case .egyptian: return "egyptian".localized
+            case .karachi: return "karachi".localized
+            case .ummAlQura: return "umm_al_qura".localized
+            case .dubai: return "dubai".localized
+            case .moonsightingCommittee: return "moon_sighting_committee".localized
+            case .northAmericaUSA: return "north_america".localized
+            case .northAmericaCanada: return "canada".localized
+            case .kuwait: return "kuwait".localized
+            case .qatar: return "qatar".localized
+            case .singapore: return "singapore".localized
+            case .tehran: return "tehran".localized
+            case .turkey: return "turkey".localized
+            case .algerian: return "algerian".localized
+            case .france: return "france".localized
+            case .russia: return "russia".localized
+            case .tunisia: return "tunisia".localized
+            case .morocco: return "morocco".localized
+            case .jordan: return "jordan".localized
+            case .oman: return "oman".localized
+            case .munich: return "munich".localized
+            case .maldives: return "maldives".localized
+            case .tajikistan: return "tajikistan".localized
+            case .vienna: return "vienna".localized
+            case .belgium: return "belgium".localized
+            case .sudan: return "sudan".localized
+            case .libya: return "libya".localized
+            case .iraq: return "iraq".localized
+            case .luxembourg: return "luxembourg".localized
         }
     }
     
@@ -203,7 +165,7 @@ public enum CalculationMethod: Int, Codable, CaseIterable {
     // MARK: - Parameters
     public var params: CalculationParameters {
         switch self {
-            case .muslimWorldLeague, .other:
+            case .muslimWorldLeague:
                 var params = CalculationParameters(fajrAngle: 18, ishaAngle: 17, method: self)
                 params.methodAdjustments = PrayerAdjustments(dhuhr: 1)
                 return params

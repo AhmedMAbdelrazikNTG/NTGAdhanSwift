@@ -1,0 +1,500 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "algerian" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وزارة الشؤون الدينية والأوقاف الجزائرية"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ministry of Religious Affairs and Endowments, Algeria"
+          }
+        }
+      }
+    },
+    "belgium" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المركز الإسلامي والثقافي البلجيكي"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Islamic and Cultural Centre of Belgium"
+          }
+        }
+      }
+    },
+    "canada" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جمعية وندسور الإسلامية، كندا"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fiqh Council of North America (Canada)"
+          }
+        }
+      }
+    },
+    "dubai" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دائرة الشؤون الإسلامية والعمل الخيري بدبي"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "UAE – General Authority of Islamic Affairs & Endowments (Dubai)"
+          }
+        }
+      }
+    },
+    "egyptian" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الهيئة المصرية العامة للمساحة"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Egyptian General Authority of Survey"
+          }
+        }
+      }
+    },
+    "france" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اتحاد المنظمات الإسلامية في فرنسا"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Union des Organisations Islamiques de France (UOIF)"
+          }
+        }
+      }
+    },
+    "iraq" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ديوان الوقف السني، العراق"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunni Endowment Office, Iraq"
+          }
+        }
+      }
+    },
+    "jordan" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وزارة الأوقاف والشؤون والمقدسات الإسلامية، الأردن"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jordanian Ministry of Awqaf Islamic Affairs and Holy Places"
+          }
+        }
+      }
+    },
+    "karachi" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جامعة العلوم الإسلامية, كراتشي"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "University of Islamic Sciences, Karachi"
+          }
+        }
+      }
+    },
+    "kuwait" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الكويت, وزارة الأوقاف والشؤون الإسلامية"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ministry of Awqaf and Islamic Affairs, Kuwait"
+          }
+        }
+      }
+    },
+    "libya" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وزارة الأوقاف والشؤون الإسلامية، ليبيا"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General Authority of Islamic Affairs, Libya"
+          }
+        }
+      }
+    },
+    "luxembourg" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المركز الثقافي الإسلامي لدوقية لوكسمبورغ الكبرى"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Islamic Centre of Luxembourg"
+          }
+        }
+      }
+    },
+    "maldives" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وزارة الشؤون الإسلامية، جزر المالديف"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ministry of Islamic Affairs, Maldives"
+          }
+        }
+      }
+    },
+    "moon_sighting_committee" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللجنة المختصة بتحري الهلال"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moonsighting Committee Worldwide"
+          }
+        }
+      }
+    },
+    "morocco" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وزارة الأوقاف والشؤون الإسلامية، المغرب"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ministry of Habous and Islamic Affairs, Morocco"
+          }
+        }
+      }
+    },
+    "munich" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المركز الإسلامي في ميونخ"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Islamic Centre of Munich"
+          }
+        }
+      }
+    },
+    "muslim_world_league" : {
+      "comment" : "Localizable.strings\n  Adhan\n\n  Created by Amin on 29/09/2025.",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رابطة العالم الإسلامي"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muslim World League (MWL)"
+          }
+        }
+      }
+    },
+    "north_america" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أمريكا الشمالية"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Islamic Society of North America (ISNA)"
+          }
+        }
+      }
+    },
+    "oman" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وزارة الأوقاف والشؤون الدينية، سلطنة عمان"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ministry of Awqaf and Religious Affairs, Oman"
+          }
+        }
+      }
+    },
+    "qatar" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قطر, دار التقويم القطرى"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qatar Calendar House"
+          }
+        }
+      }
+    },
+    "russia" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإدارة الروحية لمسلمي روسيا"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spiritual Administration of Muslims of Russia"
+          }
+        }
+      }
+    },
+    "singapore" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المجلس الديني الإسلامي في سنغافورة"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Majlis Ugama Islam Singapura (MUIS)"
+          }
+        }
+      }
+    },
+    "sudan" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وزارة الأوقاف والإرشاد، السودان"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sudan University of Science and Technology (Astronomy Dept.)"
+          }
+        }
+      }
+    },
+    "tajikistan" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المركز الإسلامي لجمهورية طاجيكستان"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Islamic Centre of Tajikistan"
+          }
+        }
+      }
+    },
+    "tehran" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "معهد الجيوفيزياء ، جامعة طهران"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Institute of Geophysics, University of Tehran"
+          }
+        }
+      }
+    },
+    "tunisia" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وزارة الشؤون الدينية التونسية"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ministry of Religious Affairs, Tunisia"
+          }
+        }
+      }
+    },
+    "turkey" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رئاسة الشؤون الدينية، تركيا"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Türkiye Diyanet İşleri Başkanlığı (Diyanet)"
+          }
+        }
+      }
+    },
+    "umm_al_qura" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أم القرى, مكة المكرمة"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umm al-Qura University, Makkah"
+          }
+        }
+      }
+    },
+    "vienna" : {
+      "extractionState" : "migrated",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المركزالإسلامي في فيينا"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Islamic Centre of Vienna"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.1"
+}

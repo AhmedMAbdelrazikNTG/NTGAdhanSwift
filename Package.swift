@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "Adhan",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v16),
         .macOS(.v14)
@@ -32,7 +33,6 @@ let package = Package(
                 "ObjcTests.m",
                 "Info.plist"
             ],
-            resources: [.copy("Resources")]
         )
     ]
 )
